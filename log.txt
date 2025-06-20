@@ -1,5 +1,8 @@
-[Arquivo] Reserva criada para o cliente João
-[Arquivo] Reserva criada para o cliente João
-[Arquivo] Reserva criada para o cliente João
-[Arquivo] Reserva criada, aguardando pagamento de R$ 270.0
+[Arquivo] Reserva criada, aguardando pagamento de R$ 405.0
 [Arquivo] Reserva criada, aguardando pagamento de R$ 90.0
+[Arquivo] Reserva criada, aguardando pagamento de R$ 225.0
+[Arquivo] Reserva criada, aguardando pagamento de R$ 900.0
+[Arquivo] Reserva criada: 5 diárias de R$ 100 = R$ 500 + 10% de desconto = R$ 450.0
+[Arquivo] Reserva criada: 10 diárias de R$ 100 = R$ 1000 + 10% de desconto = R$ 900.0
+[Arquivo] Reserva criada: 3 diárias de R$ 280 = R$ 840 + 10% de desconto = R$ 756.0
+[Arquivo] Reserva criada: 3 diárias de R$ 280 = R$ 840 + 10% de desconto = R$ 756.0
