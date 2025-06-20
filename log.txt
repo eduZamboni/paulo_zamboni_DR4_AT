@@ -1,0 +1,5 @@
+[Arquivo] Reserva criada para o cliente João
+[Arquivo] Reserva criada para o cliente João
+[Arquivo] Reserva criada para o cliente João
+[Arquivo] Reserva criada, aguardando pagamento de R$ 270.0
+[Arquivo] Reserva criada, aguardando pagamento de R$ 90.0

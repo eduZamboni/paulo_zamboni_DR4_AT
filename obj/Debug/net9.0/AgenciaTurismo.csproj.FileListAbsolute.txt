@@ -95,3 +95,4 @@
 /Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/obj/Debug/net9.0/AgenciaTurismo.pdb
 /Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/obj/Debug/net9.0/AgenciaTurismo.genruntimeconfig.cache
 /Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/obj/Debug/net9.0/ref/AgenciaTurismo.dll
+/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/obj/Debug/net9.0/AgenciaTurismo.sourcelink.json
