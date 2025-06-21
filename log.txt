@@ -6,3 +6,5 @@
 [Arquivo] Reserva criada: 10 diárias de R$ 100 = R$ 1000 + 10% de desconto = R$ 900.0
 [Arquivo] Reserva criada: 3 diárias de R$ 280 = R$ 840 + 10% de desconto = R$ 756.0
 [Arquivo] Reserva criada: 3 diárias de R$ 280 = R$ 840 + 10% de desconto = R$ 756.0
+[Arquivo] Reserva criada: 3 diárias de R$ 1234 = R$ 3702 + 10% de desconto = R$ 3331.8
+[Arquivo] Reserva criada: 40 diárias de R$ 2346 = R$ 93840 + 10% de desconto = R$ 84456.0

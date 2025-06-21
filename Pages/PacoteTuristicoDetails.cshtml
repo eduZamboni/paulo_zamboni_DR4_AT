@@ -1,0 +1,363 @@
+@page "/PacoteTuristicoDetails/{id:int}"
+@model AgenciaTurismo.Pages.PacoteTuristicoDetailsModel
+@{
+    ViewData["Title"] = Model.Pacote?.Titulo ?? "Pacote não encontrado";
+}
+
+<div class="container mt-4">
+    @if (Model.Pacote == null)
+    {
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card border-danger">
+                    <div class="card-header bg-danger text-white">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-exclamation-triangle me-2"></i>
+                            Pacote Não Encontrado
+                        </h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <i class="fas fa-search fa-3x text-muted mb-3"></i>
+                        <p class="card-text">O pacote turístico solicitado não foi encontrado.</p>
+                        <a href="/CreatePacoteTuristico" class="btn btn-primary">
+                            <i class="fas fa-arrow-left me-1"></i>
+                            Voltar aos Pacotes
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <!-- Cabeçalho do Pacote -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card border-primary">
+                    <div class="card-header bg-primary text-white">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h3 class="card-title mb-0">
+                                <i class="fas fa-suitcase-rolling me-2"></i>
+                                @Model.Pacote.Titulo
+                            </h3>
+                            <div class="text-end">
+                                <span class="badge bg-light text-dark fs-5">
+                                    ID: @Model.Pacote.Id
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5 class="text-primary">
+                                    <i class="fas fa-map-marker-alt me-2"></i>
+                                    @Model.Pacote.DestinoCompleto
+                                </h5>
+                                <p class="lead">@Model.Pacote.Descricao</p>
+                            </div>
+                            <div class="col-md-4 text-end">
+                                <h2 class="text-success mb-2">
+                                    <i class="fas fa-money-bill-wave me-2"></i>
+                                    @Model.Pacote.PrecoPorPessoa.ToString("C")
+                                </h2>
+                                <p class="text-muted mb-0">por pessoa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Informações Detalhadas -->
+        <div class="row mb-4">
+            <!-- Informações Básicas -->
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-info-circle me-2 text-info"></i>
+                            Informações Básicas
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <strong><i class="fas fa-clock text-primary me-2"></i>Duração:</strong>
+                            </div>
+                            <div class="col-6">
+                                @Model.Pacote.DuracaoEmDias @(Model.Pacote.DuracaoEmDias == 1 ? "dia" : "dias")
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <strong><i class="fas fa-users text-success me-2"></i>Capacidade:</strong>
+                            </div>
+                            <div class="col-6">
+                                @Model.Pacote.CapacidadeMaxima pessoas
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <strong><i class="fas fa-user-check text-warning me-2"></i>Vagas Ocupadas:</strong>
+                            </div>
+                            <div class="col-6">
+                                <span class="badge bg-@(Model.Pacote.Reservas.Count >= Model.Pacote.CapacidadeMaxima ? "danger" : "success")">
+                                    @Model.Pacote.Reservas.Count/@Model.Pacote.CapacidadeMaxima
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <strong><i class="fas fa-chair text-info me-2"></i>Vagas Restantes:</strong>
+                            </div>
+                            <div class="col-6">
+                                <span class="badge bg-@(Model.Pacote.CapacidadeRestante > 0 ? "success" : "danger")">
+                                    @Model.Pacote.CapacidadeRestante
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <strong><i class="fas fa-calculator text-secondary me-2"></i>Preço por Dia:</strong>
+                            </div>
+                            <div class="col-6">
+                                @Model.PrecoPorDia.ToString("C")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Destino e Datas -->
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-map me-2 text-primary"></i>
+                            Destino e Cronograma
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        @if (Model.Pacote.CidadeDestino != null)
+                        {
+                            <div class="row mb-3">
+                                <div class="col-4">
+                                    <strong><i class="fas fa-city text-primary me-2"></i>Cidade:</strong>
+                                </div>
+                                <div class="col-8">
+                                    @Model.Pacote.CidadeDestino.Nome
+                                </div>
+                            </div>
+
+                            @if (Model.Pacote.CidadeDestino.Pais != null)
+                            {
+                                <div class="row mb-3">
+                                    <div class="col-4">
+                                        <strong><i class="fas fa-flag text-success me-2"></i>País:</strong>
+                                    </div>
+                                    <div class="col-8">
+                                        @Model.Pacote.CidadeDestino.Pais.Nome
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-4">
+                                        <strong><i class="fas fa-globe text-info me-2"></i>Continente:</strong>
+                                    </div>
+                                    <div class="col-8">
+                                        <span class="badge bg-info">@Model.Pacote.CidadeDestino.Pais.Continente</span>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-4">
+                                        <strong><i class="fas fa-code text-secondary me-2"></i>Código ISO:</strong>
+                                    </div>
+                                    <div class="col-8">
+                                        <code>@Model.Pacote.CidadeDestino.Pais.CodigoIso</code>
+                                    </div>
+                                </div>
+                            }
+                        }
+
+                        @if (Model.Pacote.DataInicio.HasValue && Model.Pacote.DataFim.HasValue)
+                        {
+                            <hr>
+                            <div class="row mb-2">
+                                <div class="col-4">
+                                    <strong><i class="fas fa-calendar-plus text-success me-2"></i>Início:</strong>
+                                </div>
+                                <div class="col-8">
+                                    @Model.Pacote.DataInicio.Value.ToString("dd/MM/yyyy")
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <strong><i class="fas fa-calendar-minus text-danger me-2"></i>Fim:</strong>
+                                </div>
+                                <div class="col-8">
+                                    @Model.Pacote.DataFim.Value.ToString("dd/MM/yyyy")
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="alert alert-info mb-0">
+                                <i class="fas fa-info-circle me-2"></i>
+                                <strong>Datas flexíveis:</strong> Este pacote não possui datas específicas definidas.
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Observações (se houver) -->
+        @if (!string.IsNullOrWhiteSpace(Model.Pacote.Observacoes))
+        {
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">
+                                <i class="fas fa-sticky-note me-2 text-warning"></i>
+                                Observações Importantes
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">@Model.Pacote.Observacoes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <!-- Reservas -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-clipboard-list me-2 text-primary"></i>
+                            Reservas (@Model.Pacote.Reservas.Count)
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        @if (Model.Pacote.Reservas.Any())
+                        {
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Cliente</th>
+                                            <th>Diárias</th>
+                                            <th>Valor Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var reserva in Model.Pacote.Reservas)
+                                        {
+                                            <tr>
+                                                <td>@reserva.Id</td>
+                                                <td>
+                                                    <i class="fas fa-user me-1 text-primary"></i>
+                                                    @reserva.ClienteNome
+                                                </td>
+                                                <td>
+                                                    <span class="badge bg-info">@reserva.NumeroDeDiarias</span>
+                                                </td>
+                                                <td>
+                                                    <strong class="text-success">@reserva.ValorTotal.ToString("C")</strong>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Estatísticas das Reservas -->
+                            <div class="row mt-3">
+                                <div class="col-md-3">
+                                    <div class="text-center">
+                                        <h6 class="text-muted">Total de Reservas</h6>
+                                        <h4 class="text-primary">@Model.Pacote.Reservas.Count</h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="text-center">
+                                        <h6 class="text-muted">Receita Total</h6>
+                                        <h4 class="text-success">@Model.ReceitaTotal.ToString("C")</h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="text-center">
+                                        <h6 class="text-muted">Média por Reserva</h6>
+                                        <h4 class="text-info">@Model.MediaPorReserva.ToString("C")</h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="text-center">
+                                        <h6 class="text-muted">Taxa de Ocupação</h6>
+                                        <h4 class="text-warning">@Model.TaxaOcupacao.ToString("P1")</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="text-center py-4">
+                                <i class="fas fa-inbox fa-3x text-muted mb-3"></i>
+                                <h5 class="text-muted">Nenhuma reserva realizada</h5>
+                                <p class="text-muted">Este pacote ainda não possui reservas.</p>
+                                @if (Model.Pacote.CapacidadeRestante > 0)
+                                {
+                                    <a href="/Reservas" class="btn btn-primary">
+                                        <i class="fas fa-plus me-1"></i>
+                                        Fazer Primeira Reserva
+                                    </a>
+                                }
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ações -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div class="btn-group" role="group">
+                            <a href="/CreatePacoteTuristico" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left me-1"></i>
+                                Voltar aos Pacotes
+                            </a>
+                            @if (Model.Pacote.CapacidadeRestante > 0)
+                            {
+                                <a href="/Reservas" class="btn btn-success">
+                                    <i class="fas fa-calendar-plus me-1"></i>
+                                    Fazer Reserva
+                                </a>
+                            }
+                            else
+                            {
+                                <button class="btn btn-danger" disabled>
+                                    <i class="fas fa-times me-1"></i>
+                                    Pacote Lotado
+                                </button>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
