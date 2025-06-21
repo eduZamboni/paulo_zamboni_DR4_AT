@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/wwwroot/files/Teste 2.txt",
+      "PackagePath": "staticwebassets/files/Teste 2.txt"
+    },
+    {
+      "Id": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/wwwroot/files/Teste.txt",
+      "PackagePath": "staticwebassets/files/Teste.txt"
+    },
+    {
       "Id": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },

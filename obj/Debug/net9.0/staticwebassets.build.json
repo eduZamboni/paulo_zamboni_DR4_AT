@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9bf3DM5QLqfj9PYuq80QirdHbH+7WT0s0Si/nMpoOZE=",
+  "Hash": "pO4PjSXQ/WG1diQTSFDEiI7ty/jTg/iGkSIMy2j7VCw=",
   "Source": "AgenciaTurismo",
   "BasePath": "_content/AgenciaTurismo",
   "Mode": "Default",
@@ -498,6 +498,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js"
+    },
+    {
+      "Identity": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/obj/Debug/net9.0/compressed/btpv7l0ofh-ln6x9nxe42.gz",
+      "SourceId": "AgenciaTurismo",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/AgenciaTurismo",
+      "RelativePath": "files/Teste#[.{fingerprint=ln6x9nxe42}]?.txt.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/wwwroot/files/Teste.txt",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "0vuciei9ad",
+      "Integrity": "xC6HaIWS5U3GyHY5hGcVlblwxl6KYifrXz2WetorxWE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/wwwroot/files/Teste.txt"
     },
     {
       "Identity": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/obj/Debug/net9.0/compressed/c7fgvjljrt-kbrnm935zg.gz",
@@ -1340,6 +1361,27 @@
       "OriginalItemSpec": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map"
     },
     {
+      "Identity": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/obj/Debug/net9.0/compressed/ybzris9xq1-ln6x9nxe42.gz",
+      "SourceId": "AgenciaTurismo",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/AgenciaTurismo",
+      "RelativePath": "files/Teste 2#[.{fingerprint=ln6x9nxe42}]?.txt.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/wwwroot/files/Teste 2.txt",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "0vuciei9ad",
+      "Integrity": "xC6HaIWS5U3GyHY5hGcVlblwxl6KYifrXz2WetorxWE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/wwwroot/files/Teste 2.txt"
+    },
+    {
       "Identity": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/obj/Debug/net9.0/compressed/ycq7hv0spb-notf2xhcfb.gz",
       "SourceId": "AgenciaTurismo",
       "SourceType": "Discovered",
@@ -1443,6 +1485,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/wwwroot/files/Teste 2.txt",
+      "SourceId": "AgenciaTurismo",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/wwwroot/",
+      "BasePath": "_content/AgenciaTurismo",
+      "RelativePath": "files/Teste 2#[.{fingerprint}]?.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ln6x9nxe42",
+      "Integrity": "D2v4DOQ13AbMn8cQzhDh+OxPkOAZDBBpQgcjbG8p0vw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/files/Teste 2.txt"
+    },
+    {
+      "Identity": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/wwwroot/files/Teste.txt",
+      "SourceId": "AgenciaTurismo",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/wwwroot/",
+      "BasePath": "_content/AgenciaTurismo",
+      "RelativePath": "files/Teste#[.{fingerprint}]?.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ln6x9nxe42",
+      "Integrity": "D2v4DOQ13AbMn8cQzhDh+OxPkOAZDBBpQgcjbG8p0vw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/files/Teste.txt"
     },
     {
       "Identity": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/wwwroot/js/site.js",
@@ -3916,6 +4000,602 @@
         {
           "Name": "integrity",
           "Value": "sha256-+/824NtfTA0L7Mr42Fo+86YJP4R5cigdi9S7Fx5VVl4="
+        }
+      ]
+    },
+    {
+      "Route": "files/Teste 2.ln6x9nxe42.txt",
+      "AssetFile": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/obj/Debug/net9.0/compressed/ybzris9xq1-ln6x9nxe42.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.029411764706"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xC6HaIWS5U3GyHY5hGcVlblwxl6KYifrXz2WetorxWE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 21 Jun 2025 02:16:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"D2v4DOQ13AbMn8cQzhDh+OxPkOAZDBBpQgcjbG8p0vw=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ln6x9nxe42"
+        },
+        {
+          "Name": "label",
+          "Value": "files/Teste 2.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-D2v4DOQ13AbMn8cQzhDh+OxPkOAZDBBpQgcjbG8p0vw="
+        }
+      ]
+    },
+    {
+      "Route": "files/Teste 2.ln6x9nxe42.txt",
+      "AssetFile": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/wwwroot/files/Teste 2.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D2v4DOQ13AbMn8cQzhDh+OxPkOAZDBBpQgcjbG8p0vw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 21 Jun 2025 02:16:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ln6x9nxe42"
+        },
+        {
+          "Name": "label",
+          "Value": "files/Teste 2.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-D2v4DOQ13AbMn8cQzhDh+OxPkOAZDBBpQgcjbG8p0vw="
+        }
+      ]
+    },
+    {
+      "Route": "files/Teste 2.ln6x9nxe42.txt.gz",
+      "AssetFile": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/obj/Debug/net9.0/compressed/ybzris9xq1-ln6x9nxe42.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xC6HaIWS5U3GyHY5hGcVlblwxl6KYifrXz2WetorxWE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 21 Jun 2025 02:16:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ln6x9nxe42"
+        },
+        {
+          "Name": "label",
+          "Value": "files/Teste 2.txt.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xC6HaIWS5U3GyHY5hGcVlblwxl6KYifrXz2WetorxWE="
+        }
+      ]
+    },
+    {
+      "Route": "files/Teste 2.txt",
+      "AssetFile": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/obj/Debug/net9.0/compressed/ybzris9xq1-ln6x9nxe42.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.029411764706"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xC6HaIWS5U3GyHY5hGcVlblwxl6KYifrXz2WetorxWE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 21 Jun 2025 02:16:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"D2v4DOQ13AbMn8cQzhDh+OxPkOAZDBBpQgcjbG8p0vw=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-D2v4DOQ13AbMn8cQzhDh+OxPkOAZDBBpQgcjbG8p0vw="
+        }
+      ]
+    },
+    {
+      "Route": "files/Teste 2.txt",
+      "AssetFile": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/wwwroot/files/Teste 2.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D2v4DOQ13AbMn8cQzhDh+OxPkOAZDBBpQgcjbG8p0vw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 21 Jun 2025 02:16:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-D2v4DOQ13AbMn8cQzhDh+OxPkOAZDBBpQgcjbG8p0vw="
+        }
+      ]
+    },
+    {
+      "Route": "files/Teste 2.txt.gz",
+      "AssetFile": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/obj/Debug/net9.0/compressed/ybzris9xq1-ln6x9nxe42.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xC6HaIWS5U3GyHY5hGcVlblwxl6KYifrXz2WetorxWE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 21 Jun 2025 02:16:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xC6HaIWS5U3GyHY5hGcVlblwxl6KYifrXz2WetorxWE="
+        }
+      ]
+    },
+    {
+      "Route": "files/Teste.ln6x9nxe42.txt",
+      "AssetFile": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/obj/Debug/net9.0/compressed/btpv7l0ofh-ln6x9nxe42.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.029411764706"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xC6HaIWS5U3GyHY5hGcVlblwxl6KYifrXz2WetorxWE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 21 Jun 2025 02:16:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"D2v4DOQ13AbMn8cQzhDh+OxPkOAZDBBpQgcjbG8p0vw=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ln6x9nxe42"
+        },
+        {
+          "Name": "label",
+          "Value": "files/Teste.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-D2v4DOQ13AbMn8cQzhDh+OxPkOAZDBBpQgcjbG8p0vw="
+        }
+      ]
+    },
+    {
+      "Route": "files/Teste.ln6x9nxe42.txt",
+      "AssetFile": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/wwwroot/files/Teste.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D2v4DOQ13AbMn8cQzhDh+OxPkOAZDBBpQgcjbG8p0vw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 21 Jun 2025 02:16:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ln6x9nxe42"
+        },
+        {
+          "Name": "label",
+          "Value": "files/Teste.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-D2v4DOQ13AbMn8cQzhDh+OxPkOAZDBBpQgcjbG8p0vw="
+        }
+      ]
+    },
+    {
+      "Route": "files/Teste.ln6x9nxe42.txt.gz",
+      "AssetFile": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/obj/Debug/net9.0/compressed/btpv7l0ofh-ln6x9nxe42.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xC6HaIWS5U3GyHY5hGcVlblwxl6KYifrXz2WetorxWE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 21 Jun 2025 02:16:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ln6x9nxe42"
+        },
+        {
+          "Name": "label",
+          "Value": "files/Teste.txt.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xC6HaIWS5U3GyHY5hGcVlblwxl6KYifrXz2WetorxWE="
+        }
+      ]
+    },
+    {
+      "Route": "files/Teste.txt",
+      "AssetFile": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/obj/Debug/net9.0/compressed/btpv7l0ofh-ln6x9nxe42.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.029411764706"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xC6HaIWS5U3GyHY5hGcVlblwxl6KYifrXz2WetorxWE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 21 Jun 2025 02:16:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"D2v4DOQ13AbMn8cQzhDh+OxPkOAZDBBpQgcjbG8p0vw=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-D2v4DOQ13AbMn8cQzhDh+OxPkOAZDBBpQgcjbG8p0vw="
+        }
+      ]
+    },
+    {
+      "Route": "files/Teste.txt",
+      "AssetFile": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/wwwroot/files/Teste.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D2v4DOQ13AbMn8cQzhDh+OxPkOAZDBBpQgcjbG8p0vw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 21 Jun 2025 02:16:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-D2v4DOQ13AbMn8cQzhDh+OxPkOAZDBBpQgcjbG8p0vw="
+        }
+      ]
+    },
+    {
+      "Route": "files/Teste.txt.gz",
+      "AssetFile": "/Users/p/Documents/Infnet/Desenvolvimento Web com .Net/AT/AgenciaTurismo/obj/Debug/net9.0/compressed/btpv7l0ofh-ln6x9nxe42.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "33"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xC6HaIWS5U3GyHY5hGcVlblwxl6KYifrXz2WetorxWE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 21 Jun 2025 02:16:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xC6HaIWS5U3GyHY5hGcVlblwxl6KYifrXz2WetorxWE="
         }
       ]
     },

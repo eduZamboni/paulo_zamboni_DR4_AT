@@ -1,0 +1,138 @@
+@page
+@model AgenciaTurismo.Pages.ViewNotesModel
+@{
+    ViewData["Title"] = "Sistema de Notas";
+}
+
+<div class="container mt-4">
+    <h2>
+        <i class="fas fa-sticky-note me-2 text-primary"></i>
+        Sistema de Notas
+    </h2>
+
+    <!-- Formulário para Criar Nova Nota -->
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Criar Nova Nota</h5>
+                </div>
+                <div class="card-body">
+                    @if (!string.IsNullOrEmpty(Model.Mensagem))
+                    {
+                        <div class="alert alert-@(Model.TipoMensagem) alert-dismissible fade show" role="alert">
+                            @Model.Mensagem
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    }
+
+                    <form method="post" asp-page-handler="CriarNota">
+                        <div class="mb-3">
+                            <label asp-for="NomeArquivo" class="form-label">Nome da Nota</label>
+                            <input asp-for="NomeArquivo" 
+                                   class="form-control" 
+                                   placeholder="Digite o nome da nota (sem extensão)" 
+                                   required />
+                            <div class="form-text">O arquivo será salvo como .txt automaticamente</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="ConteudoNota" class="form-label">Conteúdo da Nota</label>
+                            <textarea asp-for="ConteudoNota" 
+                                      class="form-control" 
+                                      rows="6" 
+                                      placeholder="Digite o conteúdo da sua nota aqui..."
+                                      required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save me-1"></i>
+                            Salvar Nota
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lista de Arquivos Disponíveis -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Notas Disponíveis (@Model.ArquivosDisponiveis.Count)</h5>
+                </div>
+                <div class="card-body">
+                    @if (Model.ArquivosDisponiveis.Any())
+                    {
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h6>Selecione uma nota para visualizar:</h6>
+                                <div class="list-group">
+                                    @foreach (var arquivo in Model.ArquivosDisponiveis)
+                                    {
+                                        <form method="post" asp-page-handler="LerArquivo" class="d-inline">
+                                            <input type="hidden" name="nomeArquivo" value="@arquivo.Key" />
+                                            <button type="submit" 
+                                                    class="list-group-item list-group-item-action @(Model.ArquivoSelecionado == arquivo.Key ? "active" : "")">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h6 class="mb-1">@arquivo.Key</h6>
+                                                    <small>@arquivo.Value.ToString("dd/MM/yyyy HH:mm")</small>
+                                                </div>
+                                                <small class="text-muted">
+                                                    <i class="fas fa-file-alt me-1"></i>
+                                                    Arquivo de texto
+                                                </small>
+                                            </button>
+                                        </form>
+                                    }
+                                </div>
+                            </div>
+
+                            <div class="col-md-8">
+                                @if (!string.IsNullOrEmpty(Model.ArquivoSelecionado) && !string.IsNullOrEmpty(Model.ConteudoArquivo))
+                                {
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h6 class="mb-0">
+                                                <i class="fas fa-eye me-2"></i>
+                                                Visualizando: @Model.ArquivoSelecionado
+                                            </h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <div style="background-color: #f8f9fa; padding: 15px; border-radius: 5px; border-left: 4px solid #007bff;">
+                                                <pre style="white-space: pre-wrap; margin: 0; font-family: inherit;">@Model.ConteudoArquivo</pre>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer">
+                                            <small class="text-muted">
+                                                <i class="fas fa-clock me-1"></i>
+                                                Última modificação: @Model.ArquivosDisponiveis[Model.ArquivoSelecionado].ToString("dd/MM/yyyy HH:mm:ss")
+                                            </small>
+                                        </div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="text-center py-5">
+                                        <i class="fas fa-mouse-pointer fa-3x text-muted mb-3"></i>
+                                        <h5 class="text-muted">Selecione uma nota</h5>
+                                        <p class="text-muted">Clique em uma das notas da lista ao lado para visualizar seu conteúdo.</p>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="text-center py-5">
+                            <i class="fas fa-folder-open fa-3x text-muted mb-3"></i>
+                            <h5 class="text-muted">Nenhuma nota encontrada</h5>
+                            <p class="text-muted">Crie sua primeira nota usando o formulário acima.</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
