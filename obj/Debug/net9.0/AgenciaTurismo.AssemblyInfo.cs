@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AgenciaTurismo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f1c2b53cdfc9803a422bae0607f2db4875cddec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+763d3ed37723f71b5fd5a72b8ae72090eb3f5b49")]
 [assembly: System.Reflection.AssemblyProductAttribute("AgenciaTurismo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AgenciaTurismo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

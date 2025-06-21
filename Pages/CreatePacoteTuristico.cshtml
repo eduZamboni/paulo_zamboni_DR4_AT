@@ -1,0 +1,234 @@
+@page
+@model AgenciaTurismo.Pages.CreatePacoteTuristicoModel
+@{
+    ViewData["Title"] = "Cadastrar Pacote Turístico";
+}
+
+<div class="container mt-4">
+    <h2>
+        <i class="fas fa-suitcase-rolling me-2 text-primary"></i>
+        Pacotes Turísticos
+    </h2>
+
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Cadastrar Novo Pacote Turístico</h5>
+                </div>
+                <div class="card-body">
+                    @if (!ViewData.ModelState.IsValid)
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            <h6><i class="fas fa-exclamation-triangle me-2"></i>Corrija os erros abaixo:</h6>
+                            <div asp-validation-summary="All" class="mb-0"></div>
+                        </div>
+                    }
+
+                    @if (!string.IsNullOrEmpty(Model.MensagemSucesso))
+                    {
+                        <div class="alert alert-success" role="alert">
+                            <i class="fas fa-check-circle me-2"></i>
+                            @Model.MensagemSucesso
+                        </div>
+                    }
+
+                    <form method="post" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label asp-for="NovoPacote.Titulo" class="form-label">Título do Pacote</label>
+                                    <input asp-for="NovoPacote.Titulo" 
+                                           class="form-control" 
+                                           placeholder="Ex: Pacote Romântico Paris" />
+                                    <span asp-validation-for="NovoPacote.Titulo" class="text-danger"></span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="NovoPacote.CidadeDestinoId" class="form-label">Cidade de Destino</label>
+                                    <select asp-for="NovoPacote.CidadeDestinoId" 
+                                            class="form-select">
+                                        <option value="">-- Selecione uma cidade --</option>
+                                        @foreach (var cidade in Model.CidadesDisponiveis)
+                                        {
+                                            <option value="@cidade.Id">
+                                                @cidade.Nome, @cidade.Pais?.Nome (@cidade.Pais?.Continente)
+                                            </option>
+                                        }
+                                    </select>
+                                    <span asp-validation-for="NovoPacote.CidadeDestinoId" class="text-danger"></span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="NovoPacote.PrecoPorPessoa" class="form-label">Preço por Pessoa (R$)</label>
+                                    <input asp-for="NovoPacote.PrecoPorPessoa" 
+                                           class="form-control" 
+                                           type="number" 
+                                           step="0.01" 
+                                           min="0.01" 
+                                           placeholder="0,00" />
+                                    <span asp-validation-for="NovoPacote.PrecoPorPessoa" class="text-danger"></span>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label asp-for="NovoPacote.CapacidadeMaxima" class="form-label">Capacidade Máxima</label>
+                                            <input asp-for="NovoPacote.CapacidadeMaxima" 
+                                                   class="form-control" 
+                                                   type="number" 
+                                                   min="1" 
+                                                   placeholder="Ex: 30" />
+                                            <span asp-validation-for="NovoPacote.CapacidadeMaxima" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label asp-for="NovoPacote.DuracaoEmDias" class="form-label">Duração (dias)</label>
+                                            <input asp-for="NovoPacote.DuracaoEmDias" 
+                                                   class="form-control" 
+                                                   type="number" 
+                                                   min="1" 
+                                                   placeholder="Ex: 7" />
+                                            <span asp-validation-for="NovoPacote.DuracaoEmDias" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label asp-for="NovoPacote.Descricao" class="form-label">Descrição do Pacote</label>
+                                    <textarea asp-for="NovoPacote.Descricao" 
+                                              class="form-control" 
+                                              rows="4" 
+                                              placeholder="Descreva o que está incluído no pacote, atividades, hospedagem, etc."></textarea>
+                                    <span asp-validation-for="NovoPacote.Descricao" class="text-danger"></span>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label asp-for="NovoPacote.DataInicio" class="form-label">Data de Início (Opcional)</label>
+                                            <input asp-for="NovoPacote.DataInicio" 
+                                                   class="form-control" 
+                                                   type="date" />
+                                            <span asp-validation-for="NovoPacote.DataInicio" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label asp-for="NovoPacote.DataFim" class="form-label">Data de Fim (Opcional)</label>
+                                            <input asp-for="NovoPacote.DataFim" 
+                                                   class="form-control" 
+                                                   type="date" />
+                                            <span asp-validation-for="NovoPacote.DataFim" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label asp-for="NovoPacote.Observacoes" class="form-label">Observações (Opcional)</label>
+                                    <textarea asp-for="NovoPacote.Observacoes" 
+                                              class="form-control" 
+                                              rows="3" 
+                                              placeholder="Informações adicionais, restrições, etc."></textarea>
+                                    <span asp-validation-for="NovoPacote.Observacoes" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-save me-2"></i>
+                                Cadastrar Pacote Turístico
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            @if (!Model.CidadesDisponiveis.Any())
+            {
+                <div class="alert alert-warning">
+                    <h6><i class="fas fa-exclamation-triangle me-2"></i>Atenção!</h6>
+                    <p class="mb-2">Nenhuma cidade de destino cadastrada.</p>
+                    <a href="/CreateCidadeDestino" class="btn btn-sm btn-outline-primary">
+                        <i class="fas fa-plus me-1"></i>
+                        Cadastrar Cidade
+                    </a>
+                </div>
+            }
+
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="card-title mb-0">
+                        <i class="fas fa-info-circle me-2"></i>
+                        Dicas de Preenchimento
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled small">
+                        <li><i class="fas fa-check text-success me-2"></i>Título: 5-200 caracteres</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Descrição: 20-1000 caracteres</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Capacidade: 1-500 pessoas</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Preço: R$ 0,01 - R$ 50.000</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Duração: 1-365 dias</li>
+                        <li><i class="fas fa-info text-primary me-2"></i>Datas são opcionais</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @if (Model.PacotesCadastrados.Any())
+    {
+        <h3>Pacotes Cadastrados</h3>
+        <div class="row">
+            @foreach (var pacote in Model.PacotesCadastrados)
+            {
+                <div class="col-md-6 col-lg-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-header bg-primary text-white">
+                            <h6 class="card-title mb-0">@pacote.Titulo</h6>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text small mb-2">
+                                <i class="fas fa-map-marker-alt text-danger me-1"></i>
+                                <strong>Destino:</strong> @pacote.DestinoCompleto
+                            </p>
+                            <p class="card-text small mb-2">
+                                <i class="fas fa-money-bill-wave text-success me-1"></i>
+                                <strong>Preço:</strong> @pacote.PrecoPorPessoa.ToString("C")
+                            </p>
+                            <p class="card-text small mb-2">
+                                <i class="fas fa-clock text-info me-1"></i>
+                                <strong>Duração:</strong> @pacote.DuracaoEmDias dias
+                            </p>
+                            <p class="card-text small mb-2">
+                                <i class="fas fa-users text-warning me-1"></i>
+                                <strong>Capacidade:</strong> @pacote.CapacidadeRestante/@pacote.CapacidadeMaxima vagas
+                            </p>
+                            @if (!string.IsNullOrEmpty(pacote.Descricao))
+                            {
+                                <p class="card-text small">
+                                    @(pacote.Descricao.Length > 100 ? pacote.Descricao.Substring(0, 100) + "..." : pacote.Descricao)
+                                </p>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p class="text-muted">Nenhum pacote turístico cadastrado.</p>
+    }
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
