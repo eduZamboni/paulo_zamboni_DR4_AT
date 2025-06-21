@@ -1,0 +1,90 @@
+@page
+@model AgenciaTurismo.Pages.CreateCidadeDestinoModel
+@{
+    ViewData["Title"] = "Cadastrar Cidade de Destino";
+}
+
+<div class="container mt-4">
+    <h2>
+        <i class="fas fa-city me-2 text-primary"></i>
+        Cidades de Destino
+    </h2>
+
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Cadastrar Nova Cidade</h5>
+                </div>
+                <div class="card-body">
+                    @if (!ViewData.ModelState.IsValid)
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            <h6><i class="fas fa-exclamation-triangle me-2"></i>Corrija os erros abaixo:</h6>
+                            <div asp-validation-summary="All" class="mb-0"></div>
+                        </div>
+                    }
+
+                    @if (!string.IsNullOrEmpty(Model.MensagemSucesso))
+                    {
+                        <div class="alert alert-success" role="alert">
+                            <i class="fas fa-check-circle me-2"></i>
+                            @Model.MensagemSucesso
+                        </div>
+                    }
+
+                    <form method="post" novalidate>
+                        <div class="mb-3">
+                            <label asp-for="NovaCidade.Nome" class="form-label">Nome da Cidade</label>
+                            <input asp-for="NovaCidade.Nome" 
+                                   class="form-control" 
+                                   placeholder="Nome da cidade (mín. 3 caracteres)" />
+                            <span asp-validation-for="NovaCidade.Nome" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="NovaCidade.PaisDestinoId" class="form-label">País de Destino</label>
+                            <select asp-for="NovaCidade.PaisDestinoId" 
+                                    class="form-select"
+                                    asp-items="@(new SelectList(Model.PaisesDisponiveis, "Id", "Nome"))">
+                                <option value="">-- Selecione um país --</option>
+                            </select>
+                            <span asp-validation-for="NovaCidade.PaisDestinoId" class="text-danger"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Cadastrar Cidade</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @if (Model.CidadesCadastradas.Any())
+    {
+        <h3>Cidades Cadastradas</h3>
+        <div class="row">
+            @foreach (var cidade in Model.CidadesCadastradas)
+            {
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>@cidade.Nome</h5>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>País:</strong> @cidade.Pais?.Nome</p>
+                            <p><strong>Continente:</strong> @cidade.Pais?.Continente</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p>Nenhuma cidade cadastrada.</p>
+    }
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
